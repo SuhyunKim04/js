@@ -205,3 +205,59 @@ if(gg > 19){
 else{
     console.log('안녕히가세요')
 }
+
+//논리연산자
+// ||(or)
+// &&(and)
+// !(not)
+
+// \\(or)
+//여러개중 하나라도 true 면 true
+//즉, 모든값이 false 일때만 false를 반환
+
+// &&(and)
+// 모든값이 true 이면 true
+// 즉, 하나라도 false 이면 false를 반환
+
+// !(not)
+// true 이면 false
+// false 이면 true
+
+//OR은 첫번째 true 를 발견하는 즉시 평가를 멈춤
+//and는 첫번째 false 를 발견하는 즉시 평가를 멈춤
+
+const pass = 'Mike';
+const uuu = 30;
+if(pass === 'Mike' && uuu > 19){
+    console.log('통과')
+}else {
+    console.log('돌아가')
+}
+
+//NOT 
+// 나이를 입력받아 성인 아니면 돌아가라고
+
+// const qq = prompt('나이가...?')
+// const isa = qq > 19;
+
+// if(!isa) {
+//     console.log('돌아가')
+// }
+
+
+//우선순위
+// 남자이고, 이름이 Mike 이거나 성인이면 통과
+
+const gender = 'F';
+const nn= 'Jane';
+const iskkk = true;
+//******************************************
+if(gender === 'M' && nn === "Jane" || iskkk){
+// if(gender === 'M' && (nn === "Mike" || iskkk)){
+    console.log('통과')
+}else {
+    console.log('돌아가')
+}
+//*******************************************
+//and 가 or 보다 우선순위가 높음
+
