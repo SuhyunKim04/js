@@ -261,5 +261,316 @@ if(gender === 'M' && nn === "Jane" || iskkk){
 //******************************************* 물어보기
 //and 가 or 보다 우선순위가 높음
 
+//for 문
+for (let i=0; i <= 10; i++){
+    console.log(i)
+}
+
+//while 문
+let ppp = 0;
+while(ppp<10){
+    console.log(g);
+    ppp++
+}
+
+//do.. while 문
+let y = 0;
+do{
+    y++;
+} while (y<10)
+console.log(y)
+
+//break, continue
+
+//break
+// while(true){
+//     let answer = confirm('계속 할까요?');
+//     if(!answer){
+//         break;
+//     }
+// }
+//무한 반복문은 특정 조건이 되었을때 break 해주는게 중요하다
+
+//continue
+//짝수만
+for (let ee = 0; ee < 10; ee++){
+    if(ee%2){
+        continue;
+    } 
+    console.log(ee)
+}
+//명확한 횟수가 정해져 있으면 for문을 그게 아니라면 while을 사용하는게 괜찮다
 
 
+
+//switch
+//케이스가 다양할 경우 보다 간결하게 쓸 수 있다
+
+// switch(평가){     
+//     case A: 
+//     A 일때 코드
+//     case B: 
+//     B 일때 코드
+// }
+
+// if(평가 == A){
+//     A일때 코드
+// }else if(평가 == B){
+//     B일때 코드
+// }
+//두개가 같은거임
+
+//바나나 : 200원
+//사과: 100원
+//키위 : 300원
+//멜론: 500원
+//수박 : 500원
+//사고 싶은 과일을 물어보고 가격 알려주기
+
+// let fruit = prompt('무슨 과일을 사고 싶나요?');
+// switch(fruit){
+//     case '사과' :
+//     console.log('100원 입니다');
+//     break;
+//     case '바나나' :
+//     console.log('200원 입니다');
+//     break;
+//     case '키위' :
+//     console.log('300원 입니다');
+//     break;
+//     case '멜론' :
+//     case '수박' :
+//     console.log('500원 입니다');
+//     break;
+//     default:
+//         console.log('그런 과일 없습니다');
+// }
+
+//힘수(function)
+    //함수   //함수명  //매개변수(없술 수도 있고, 한개일 수도 있고, 두개 이상일수도 있다) 여려개이면 쉼표를 찍어줘야 한다.
+// function sayHello(name){
+//     console.log(`Hello,${name}`)
+// }
+
+//매개 변수없는 function
+function showError(){
+    alert('에러가 발생했습니다. 새로고침 해주세요')
+}
+
+// showError();
+let msg =  'Hello'; // 전역 변수(glovbal varable)
+console.log('함수 호출 전')
+console.log(msg);
+function sayHello(qqq){
+    
+    if(qqq){
+        msg += `, ${qqq}`;
+    }
+console.log('함수 내부')
+//지역 변수
+    console.log(msg);
+}
+
+sayHello();
+sayHello('Mike');
+console.log('함수 호출 후')
+console.log(msg);
+//이 메세지는 함수 밖에서는 사용할 수 없음
+//지역변수임
+
+
+//만약 함수 외부에서도 하용하고 싶으면 let qqq = 'Hello' 를 위에처럼 밖에 써줘야함
+
+//전역 변수와 지역 변수
+let tuy = 'welcome';
+console.log(tuy)
+function sayHello(iii){
+let tuy = 'Hello'
+    console.log(msg + ' ' + iii);
+}
+
+sayHello('Mike');
+console.log(tuy);
+//지역변수와 전역변수를  let으로 동일한 이름으로 해줘도 서로 간섭 안받음
+
+let qw = 'Mike';
+
+function ttt(qw){
+    console.log(qw)
+}
+
+ttt(); //undefined
+ttt('Jane'); //Jane
+//지역 변수를 쓰는 습관을 들여야함
+
+//or 연산자 활용해서 function 만들기
+function ss(xx){
+    let newName = xx || 'friend';
+    let nn = `Hello, ${newName}`
+    console.log(nn)
+}
+
+ss();
+ss('Jane');
+                //default 값
+function vv (Name = 'friend'){
+    let bbb = `Hello ${Name}`
+    console.log (bbb)
+}
+
+vv();
+vv('Jane')
+//defualt 값을 정해주면 이름이 없을때만 할당된다
+
+//return 으로 값 반환
+// function showError(){
+//     alert('에러가 발생했습니다.');
+//     return;
+//     alert('이 코드는 절대 실행되지 않습니다');
+// }
+
+// const result = showError();
+// console.log(result);
+//return 문이 없는 함수도 항상 undefined를 반환한다
+//return문은 함수를 종료할때도 사용한다
+
+//함수 (function)
+//한번에 한 작없에 집중
+//읽기 쉽고 어떤 동작인지 알 수 있게 네이밍
+
+//showError 에러를 보여줌
+//getName 이름을 얻어옴
+//createUserData 유저데이터 생성
+//checkLogin 로그인 여부 체크
+
+
+// function sayHello(){
+//     console.log('Hello');
+// }
+//함수 선언문
+
+// let sayHello = function(){
+//     console.log('Hello');
+// }
+//변수를 선언해 함수 할당함
+//함수 표현식
+
+
+//함수 선언문: 어디서든 호출 가능
+//sayHello();
+// function sayHello(){
+//     console.log('Hello');
+// }
+// 함수를 호출을 함수를 쓰기전에 호출이 가능함
+
+
+//함수 표현식: 코드에 도달하면 생성
+// let sayHello = function(){
+//     console.log('Hello')
+// }
+// sayHello();
+//순서대로 읽으면서 내려오기 때문에 함수가 선언되기 전에는 못읽음
+
+
+//화살표 함수(arrow function)
+// let showerror = () => {
+//     console.log('error')
+// }
+
+// const hi = (cc) => {
+//     const ei = `Hello, ${cc}`;
+//     console.log(ei)
+// }
+
+
+
+//객체(object)
+// const superman = {
+//     name: 'clark',
+//     age:33,
+// }
+
+//접근
+//superman.name    'clark;
+//superman['age]   33
+
+//추가
+//superman.gender = 'nale'
+// superman['hairColor'] = 'black'
+
+//삭제
+//delete superman.hairColor;
+
+//Object - 단축 프로퍼티
+// const name = 'clack'     const superman={
+// const age = 33;             name, (같다) name:name
+//                             age,  (같다) age:age   
+//                             gender:'male'
+//                         }
+
+//만약 존재하지 않는 프로퍼티에 접근하면 umdefined가 뜸
+//supernam.birthDay;
+
+//'birthDay' in superman;
+//false
+
+//'age'in superman
+//true
+
+//for in 반복문
+// for (let key in superman){
+//     console.log(key)
+//     console.log(superman[key])
+// }
+
+const superman = {
+    nn :'clark',
+    ag: 30,
+}
+
+delete superman.ag;
+console.log(superman)
+
+function makeObject(gf, hg){
+    return{
+        name: gf,
+        age: hg,
+        hobby: 'football'
+    }
+}
+
+const Mike = makeObject('Mile', 30);
+console.log(Mike)
+
+console.log('age' in Mike);
+console.log('birthday' in Mike);
+
+//갹체 in
+function adult(user){
+    if (!('age' in user) || //use에 age가 없거나
+    user.age< 20){          //20살 미만이거나
+        return false;
+    }
+    return true;
+}
+
+const Tom = {
+    name: 'Tom',
+    age: 30
+}
+
+const Bii = {
+    name: 'Jane'
+}
+
+console.log(adult(Bii))
+
+//객체 for in 
+const Su = {
+    name: 'Su',
+    age: 30
+};
+
+for(x in Su){
+ console.log(Su[x])
+}
