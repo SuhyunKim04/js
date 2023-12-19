@@ -574,3 +574,97 @@ const Su = {
 for(x in Su){
  console.log(Su[x])
 }
+
+//객체 method this
+
+//화살표 함수는 일반 함수와는 달리 자신만의 thi를 가지지 않음
+// 화살표 함수 내부에서 this 를 사용하면, 그 this는 외부에서 값을 가져옴 
+
+let boy = {
+    name: "Mike",
+    showName: function(){
+        console.log(this.name)
+    }
+}
+
+let man = boy;
+boy = null;
+
+man.showName();
+
+let boys = {
+    name: "Mike",
+    sayThis: function(){
+        console.log(this)
+    }
+}
+boys.sayThis();
+//여기에서 this는 객체임
+
+//객체는 화살표 함수로 작성하지 않는게 좋다
+
+
+
+//배열 (Array)
+//배열은 순서가 있는 리스트
+
+//배열의 특징
+//배열은 문자 뿐만 아니라, 숫자, 객체, 함수 등도 포함할 수 있음
+// let arr = [
+//     '민수',
+//     3,
+//     false,
+//     {
+//         name: 'Mike',
+//         age:30,
+//     },
+//     function(){
+//         console.log('TEST')
+//     }
+// ]
+
+// length: 배열의 길이
+
+//push(): 배열 끝에 추가
+// let days = ['월', '화', '수'];
+// days.push('목')
+// consoele.log(days) ['월,''화','수','목']
+
+
+//pop(): 배열 끝 요소 제거
+// let days=['월','화','수'];
+// days.pop()
+// console.log(days) ['월','화']
+
+//shift, unshift : 배열 앞에 제거/추가
+//추가
+// days.unshift('일');
+// console.log(days) ['일','월','화','수'];
+
+// //제거
+// days.shift();
+// console.log(days) ['월','화','수']
+//여러 요소 한번에 추가 가능
+
+//반복문 : for
+// let days = ['월','화','수'];
+// for(let index = 0; index < days.length; index++){
+//     console.log(days[index])
+// }
+
+
+//반복문: for...of
+// let days=['월','화','수']
+// for(let day of days){
+//     console.log(day)
+// }
+//for 문보다는 간단하지만 index를 얻지는 못함
+
+let days = ['mon','tue','wed'];
+days.push('thu')
+days.unshift('sun')
+
+for(let x of days){
+    console.log(x)
+}
+
